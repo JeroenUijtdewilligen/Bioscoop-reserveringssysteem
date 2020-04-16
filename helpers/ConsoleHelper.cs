@@ -29,11 +29,7 @@ namespace Project.Helpers {
 
         // Parses an int value
         public static int ParseInt(string value, string paramName = null) {
-            try {
-                return int.Parse(value);
-            } catch(FormatException) {
-                throw new ArgumentException((paramName ?? value) + " moet een integer zijn");
-            }
+            return int.Parse(value);
         }
 
         // Parses an double value
