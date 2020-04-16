@@ -101,9 +101,6 @@ namespace Project.Services {
             record.password = user.password;
             record.admin = user.admin;
 
-            // Try to save
-            database.TryToSave();
-
             return true;
         }
 
