@@ -28,11 +28,6 @@ namespace Project.Base {
                 throw new Exception("Failed to register question");
             }
 
-            // Block the thead until we've got an answer
-            while (question.GetAnswer() == null) {
-                Thread.Sleep(1);
-            }
-
             string answer = question.GetAnswer();
 
             // Return default if answer is empty
