@@ -10,11 +10,6 @@ namespace Project.Helpers {
         public static void LoadFile(string category, string fileName, object obj) {
             StorageFile file = new StorageFile(category, fileName);
 
-            // Ignore if file does not exist
-            if(!File.Exists(file.location)) {
-                return;
-            }
-
             // Read file and fill object
             string json = File.ReadAllText(file.location);
             JsonConvert.PopulateObject(json, obj);
